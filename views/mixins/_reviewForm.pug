@@ -1,0 +1,10 @@
+mixin reviewForm(store)
+
+    form.reviewer(action = `/reviews/${store._id}` method= 'POST')
+        textarea(name="text" placeholder='Вы бывали в этом месте? Вам есть что сказать? Можете оставить отзыв ...')
+        .reviewer__meta
+            .reviewer__stars
+                each num in [5,4,3,2,1]
+                    input(type="radio" reqiuired id=`star${num}` name=`rating` value=num)
+                    label(for=`star${num}`) #{num} Stars
+            input.button(type="submit", value="Оставить отзыв ➜")

@@ -1,0 +1,23 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background: $purple;
+  background:#efefef;
+  &:before {
+    content: '';
+    display: block;
+    background: #303030; 
+    height: 10px;
+    width: 100%;
+  }
+}
+
+.inner {
+  max-width:900px;
+  margin: 40px auto;
+  @media all and (max-width: 900px) {
+    padding: 2rem;
+  }
+}
