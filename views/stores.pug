@@ -9,4 +9,5 @@ block content
     .stores
       each store in stores
         +storeCard(store)
-    +pagination(page,pages,count)
+    if stores > 9
+      +pagination(page,pages,count)
