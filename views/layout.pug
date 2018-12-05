@@ -2,7 +2,7 @@ doctype html
 html(lang="ru")
   head
     title= `${title}`
-    link(rel='stylesheet', href='/dist/style.css')
+    link(rel='stylesheet', href='/dist/style.css.map')
     link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
@@ -52,5 +52,5 @@ html(lang="ru")
 
     block scripts
       script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
-      script(src="/dist/App.bundle.js")
+      script(src="/dist/App.bundle.js.map")
     
